@@ -1,0 +1,14 @@
+# Ignore XML and SAF folders
+XML/
+SAF/
+# Ignore Python cache and environment files
+__pycache__/
+*.pyc
+*.pyo
+*.env
+.env
+# Ignore VS Code settings
+.vscode/
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
