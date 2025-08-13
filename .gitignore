@@ -1,6 +1,8 @@
 # Ignore XML and SAF folders
 XML/
 SAF/
+reference-files/
+normalize-dspace9/
 # Ignore Python cache and environment files
 __pycache__/
 *.pyc

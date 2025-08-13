@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 
+
 def convert_to_marcxml(input_file, output_file):
     # Parse the input XML file
     tree = ET.parse(input_file)
@@ -67,6 +68,7 @@ def convert_to_marcxml(input_file, output_file):
     # Write the output MARCXML file
     tree = ET.ElementTree(record)
     tree.write(output_file, encoding='UTF-8', xml_declaration=True)
+
 
 # Example usage
 input_file = 'input.xml'

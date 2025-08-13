@@ -1,6 +1,8 @@
+
 import os
 import shutil
 import xml.etree.ElementTree as ET
+import html
 
 # Diretórios
 entrada = "xml"
@@ -100,7 +102,8 @@ for nome in os.listdir(entrada):
         for elem, qual, lang, valor in metadados:
             lang_attr = f' language="{lang}"' if lang else ""
             qual_attr = f' qualifier="{qual}"' if qual else ' qualifier="none"'
-            f.write(f'  <dcvalue element="{elem}"{qual_attr}{lang_attr}>{valor}</dcvalue>\n')
+            valor_escapado = html.escape(valor, quote=True)
+            f.write(f'  <dcvalue element="{elem}"{qual_attr}{lang_attr}>{valor_escapado}</dcvalue>\n')
         f.write('</dublin_core>\n')
 
     # Criar contents (se houver PDF com o mesmo nome)
